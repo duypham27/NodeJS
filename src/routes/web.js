@@ -6,12 +6,10 @@ let router = express.Router();
 let initWebRoutes = (app) => {
     router.get('/', homeController.getHomePage);
     router.get('/about', homeController.getAboutPage);
+    router.get('/crud', homeController.getCRUD);
 
-    router.get('/duypham27', (req, res) => {
-        return res.send('this is sercet from duypham27')
-    });
+    router.post('/post-crud', homeController.postCRUD);
     //rest api
-
 
     return app.use("/", router);
 }
