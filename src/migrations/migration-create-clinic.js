@@ -9,29 +9,22 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-            contentHTML: {
+            address: {
                 allowNull: false,
-                type: Sequelize.TEXT('long')
+                type: Sequelize.STRING
             },
-            contentMarkdown: {
+            name: {
                 allowNull: false,
-                type: Sequelize.TEXT('long')
+                type: Sequelize.STRING
             },
-            description: {
-                allowNull: true,
-                type: Sequelize.TEXT('long')
+            descriptionMarkdown: {
+                type: Sequelize.TEXT
             },
-            doctorId: {
-                allowNull: false,
-                type: Sequelize.INTEGER
+            descriptionHTML: {
+                type: Sequelize.TEXT
             },
-            specialtyId: {
-                allowNull: false,
-                type: Sequelize.INTEGER
-            },
-            clinicId: {
-                allowNull: false,
-                type: Sequelize.INTEGER
+            image: {
+                type: Sequelize.BLOB('long'),
             },
             createdAt: {
                 allowNull: false,
