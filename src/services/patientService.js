@@ -12,7 +12,7 @@ let postBookAppointment = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
             if (!data.email || !data.doctorId || !data.timeType || !data.date
-                || !data.fullName || !data.seletedGender || !data.address
+                || !data.fullName || !data.selectedGender || !data.address
             ) {
 
                 resolve({
@@ -37,9 +37,9 @@ let postBookAppointment = (data) => {
                     defaults: {
                         email: data.email,
                         roleId: 'R3',
-                        gender: data.seletedGender,
+                        gender: data.selectedGender,
                         address: data.address,
-                        firtName: data.fullName,
+                        firstName: data.fullName,
                     },
                 });
 
